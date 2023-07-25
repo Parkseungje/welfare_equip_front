@@ -1,4 +1,3 @@
-//주석 테스트
 import React from 'react';
 
 const Home = () => {
