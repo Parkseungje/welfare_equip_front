@@ -17,7 +17,7 @@ const App = () => {
         <div className="left-menu">
           <Link to="/">홈</Link>
           <Link to="/mypage">마이페이지</Link>
-          <Link to="/order-history">주문내역</Link>
+          <Link to="/order_history">주문내역</Link>
           <Link to="/cart">장바구니</Link>
         </div>
         <div className="right-menu">
@@ -32,7 +32,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route path="/mypage" element={<MyPage />} />
-        <Route path="/order-history" element={<OrderHistory />} />
+        <Route path="/order_history" element={<OrderHistory />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />

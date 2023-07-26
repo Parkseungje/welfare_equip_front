@@ -1,5 +1,6 @@
 // 이미지를 public 폴더에 저장한 경우
 import React from 'react';
+import '../css/main_img/main_img.css';
 
 const MainImage = () => {
   return (
