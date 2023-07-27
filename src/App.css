@@ -1,4 +1,8 @@
 /* App.css */
+body {
+  height: 2000px; /* 높이를 1000px로 설정 */
+}
+
 .navbar {
   display: flex;
   justify-content: space-between; /* 좌우 정렬 */
