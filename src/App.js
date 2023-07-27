@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './header/Home';
 import MyPage from './header/MyPage';
@@ -8,21 +8,11 @@ import Cart from './header/Cart';
 import Login from './header/Login';
 import Signup from './header/Signup';
 import MainImage from './header/MainImage';
-import './App.css'; // App.css에서 스타일을 정의합니다.
 import SearchBar from './header/SearchBar';
 import DropDown from './header/DropDown';
+import './App.css'; // App.css에서 스타일을 정의합니다.
 
 const App = () => {
-    const [showMenu, setShowMenu] = useState(); /* 만약 첫파라미터인 showMenu에 초기값 false 할당하고싶으면 useState(false); 하면됨, 두번째 파라미터 setShowMenu 자바의 setter와 같은기능이다 */
-
-    const handleMouseOver = () => {
-      setShowMenu(true);
-    };
-  
-    const handleMouseOut = () => {
-      setShowMenu(false);
-    };
-
   return (
     <Router>
       <div className="navbar">
