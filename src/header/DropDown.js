@@ -74,15 +74,42 @@ const DropDown = () => {
           }
       };
 
+      const handleMobileButtonClick = (menuNumber) => {
+        switch (menuNumber) {
+          case 1:
+            setShowMenu1((prev) => !prev);
+            break;
+          case 2:
+            setShowMenu2((prev) => !prev);
+            break;
+          case 3:
+            setShowMenu3((prev) => !prev);
+            break;
+          case 4:
+            setShowMenu4((prev) => !prev);
+            break;
+          case 5:
+            setShowMenu5((prev) => !prev);
+            break;
+          case 6:
+            setShowMenu6((prev) => !prev);
+            break;
+          case 7:
+            setShowMenu7((prev) => !prev);
+            break;
+        }
+    };
+
     return (
       <div className="container">
         <div
-          className="menu"
-          onMouseOver={() => handleMouseOver(1)}
-          onMouseOut={() => handleMouseOut(1)}
+          className={`menu ${showMenu1 ? 'show-dropdown' : ''}`}
+          onMouseOver={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOver(1)}
+          onMouseOut={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOut(1)}
+          onClick={() => window.matchMedia('(max-width: 768px)').matches && handleMobileButtonClick(1)}
         >
           <button>선한이웃복지용구</button>
-          {showMenu1 && (
+          {showMenu1 && !window.matchMedia('(max-width: 768px)').matches && (
             <ul className="dropdown">
               <li>
                 <Link to="/electric-bed">전동침대</Link>
@@ -99,13 +126,31 @@ const DropDown = () => {
             </ul>
           )}
         </div>
+        {/* mobile */} 
+        {showMenu1 && window.matchMedia('(max-width: 768px)').matches && (
+            <div>
+            <div className="dropdown-m">
+                <Link to="/electric-bed">전동침대</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/wheelchair">휠체어</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/mattress">매트리스</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">이동욕조</Link>
+            </div>
+            </div>
+          )}
         <div
-          className="menu"
-          onMouseOver={() => handleMouseOver(2)}
-          onMouseOut={() => handleMouseOut(2)}
+          className={`menu ${showMenu2 ? 'show-dropdown' : ''}`}
+          onMouseOver={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOver(2)}
+          onMouseOut={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOut(2)}
+          onClick={() => window.matchMedia('(max-width: 768px)').matches && handleMobileButtonClick(2)}
         >
           <button>급여대여</button>
-          {showMenu2 && (
+          {showMenu2 && !window.matchMedia('(max-width: 768px)').matches &&(
             <ul className="dropdown">
               <li>
                 <Link to="/electric-bed">전동침대</Link>
@@ -122,13 +167,31 @@ const DropDown = () => {
             </ul>
           )}
         </div>
+        {/* mobile */} 
+        {showMenu2 && window.matchMedia('(max-width: 768px)').matches && (
+            <div>
+            <div className="dropdown-m">
+                <Link to="/electric-bed">전동침대</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/wheelchair">휠체어</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/mattress">매트리스</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">이동욕조</Link>
+            </div>
+            </div>
+          )}
         <div
-          className="menu"
-          onMouseOver={() => handleMouseOver(3)}
-          onMouseOut={() => handleMouseOut(3)}
+          className={`menu ${showMenu3 ? 'show-dropdown' : ''}`}
+          onMouseOver={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOver(3)}
+          onMouseOut={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOut(3)}
+          onClick={() => window.matchMedia('(max-width: 768px)').matches && handleMobileButtonClick(3)}
         >
           <button>급여구입</button>
-          {showMenu3 && (
+          {showMenu3 && !window.matchMedia('(max-width: 768px)').matches &&(
             <ul className="dropdown">
               <li>
                 <Link to="/electric-bed">이동변기/간이변기</Link>
@@ -160,16 +223,49 @@ const DropDown = () => {
             </ul>
           )}
         </div>
+        {/* mobile */} 
+        {showMenu3 && window.matchMedia('(max-width: 768px)').matches && (
+            <div>
+            <div className="dropdown-m">
+                <Link to="/electric-bed">이동변기/간이변기</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/wheelchair">목욕의자</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/mattress">보행기</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">지팡이</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">안전손잡이</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">방석</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">자세변환용구</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">방수시트</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">요실금팬티</Link>
+            </div>
+            </div>
+          )}
         <div
-          className="menu"
-          onMouseOver={() => handleMouseOver(4)}
-          onMouseOut={() => handleMouseOut(4)}
+          className={`menu ${showMenu4 ? 'show-dropdown' : ''}`}
+          onMouseOver={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOver(4)}
+          onMouseOut={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOut(4)}
+          onClick={() => window.matchMedia('(max-width: 768px)').matches && handleMobileButtonClick(4)}
         >
           <button>일반대여</button>
-          {showMenu4 && (
+          {showMenu4 && !window.matchMedia('(max-width: 768px)').matches && (
             <ul className="dropdown">
               <li>
-                <Link to="/electric-bed">전동침대</Link>
+                <Link to="/electric-bed">1전동침대</Link>
               </li>
               <li>
                 <Link to="/wheelchair">휠체어</Link>
@@ -180,13 +276,28 @@ const DropDown = () => {
             </ul>
           )}
         </div>
+        {/* mobile */} 
+        {showMenu4 && window.matchMedia('(max-width: 768px)').matches && (
+            <div>
+                <div className="dropdown-m">
+                    <Link to="/electric-bed">전동침대</Link>
+                </div>
+                <div className="dropdown-m">
+                    <Link to="/wheelchair">휠체어</Link>
+                </div>
+                <div className="dropdown-m">
+                    <Link to="/mattress">욕창예방 매트리스</Link>
+                </div>
+            </div>
+          )}
         <div
-          className="menu"
-          onMouseOver={() => handleMouseOver(5)}
-          onMouseOut={() => handleMouseOut(5)}
+          className={`menu ${showMenu5 ? 'show-dropdown' : ''}`}
+          onMouseOver={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOver(5)}
+          onMouseOut={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOut(5)}
+          onClick={() => window.matchMedia('(max-width: 768px)').matches && handleMobileButtonClick(5)}
         >
           <button>일반구입</button>
-          {showMenu5 && (
+          {showMenu5 && !window.matchMedia('(max-width: 768px)').matches && (
             <ul className="dropdown">
               <li>
                 <Link to="/electric-bed">이동변기/간이변기</Link>
@@ -218,13 +329,46 @@ const DropDown = () => {
             </ul>
           )}
         </div>
+        {/* mobile */} 
+        {showMenu5 && window.matchMedia('(max-width: 768px)').matches && (
+            <div>
+            <div className="dropdown-m">
+                <Link to="/electric-bed">이동변기/간이변기</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/wheelchair">목욕의자</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/mattress">보행기</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">지팡이</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">안전손잡이</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">방석</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">자세변환용구</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">방수시트</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">요실금팬티</Link>
+            </div>
+            </div>
+          )}
         <div
-          className="menu"
-          onMouseOver={() => handleMouseOver(6)}
-          onMouseOut={() => handleMouseOut(6)}
+          className={`menu ${showMenu6 ? 'show-dropdown' : ''}`}
+          onMouseOver={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOver(6)}
+          onMouseOut={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOut(6)}
+          onClick={() => window.matchMedia('(max-width: 768px)').matches && handleMobileButtonClick(6)}
         >
           <button>환자영양식</button>
-          {showMenu6 && (
+          {showMenu6 && !window.matchMedia('(max-width: 768px)').matches && (
             <ul className="dropdown">
               <li>
                 <Link to="/electric-bed">고소한 검은깨</Link>
@@ -241,13 +385,31 @@ const DropDown = () => {
             </ul>
           )}
         </div>
+        {/* mobile */} 
+        {showMenu6 && window.matchMedia('(max-width: 768px)').matches && (
+            <div>
+            <div className="dropdown-m">
+                <Link to="/electric-bed">고소한 검은깨</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/wheelchair">구수한맛</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/mattress">오메가</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/portable-bath">화이바</Link>
+            </div>
+            </div>
+          )}
         <div
-          className="menu"
-          onMouseOver={() => handleMouseOver(7)}
-          onMouseOut={() => handleMouseOut(7)}
+          className={`menu ${showMenu7 ? 'show-dropdown' : ''}`}
+          onMouseOver={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOver(7)}
+          onMouseOut={() => !window.matchMedia('(max-width: 768px)').matches && handleMouseOut(7)}
+          onClick={() => window.matchMedia('(max-width: 768px)').matches && handleMobileButtonClick(7)}
         >
-          <button>홈헬스케어</button>
-          {showMenu7 && (
+          <button>고객지원</button>
+          {showMenu7 && !window.matchMedia('(max-width: 768px)').matches && (
             <ul className="dropdown">
               <li>
                 <Link to="/electric-bed">건강기능신발</Link>
@@ -261,6 +423,20 @@ const DropDown = () => {
             </ul>
           )}
         </div>
+        {/* mobile */} 
+        {showMenu7 && window.matchMedia('(max-width: 768px)').matches && (
+            <div>
+            <div className="dropdown-m">
+                <Link to="/electric-bed">건강기능신발</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/wheelchair">압박용밴드</Link>
+            </div>
+            <div className="dropdown-m">
+                <Link to="/mattress">지팡이고무</Link>
+            </div>
+            </div>
+          )}
       </div>
     );
 };

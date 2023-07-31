@@ -1,28 +1,29 @@
 .container {
     display: flex;
+    padding-left: 30px;
+    padding-right: 50px;
     justify-content: space-between;
   }
   
   .menu {
-    position: relative;
+    position: relative; /*디폴트는 static(고정)이고 relatvie(상대적인) 을 사용하면 부모요소에 상대적으로 픽셀을 주는만큼 이동함*/
   }
   
   .menu button {
     padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #fff;
     border: none;
     cursor: pointer;
   }
-  
+
   .dropdown {
-    position: absolute;
+    position: absolute; /* absolute는 html 전체를 부모요소로 보고 위치를 옮길수 있다 absolute로 설정하는순간 부모요소와 관계들이 끊긴다 */
     top: 100%;
-    left: 0;
+    left: -10%;
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #FCFBF1;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
@@ -32,8 +33,56 @@
   .dropdown li {
     padding: 10px;
   }
+
+  .dropdown li a{
+    color: black;
+  }
   
   .dropdown li:hover {
     background-color: #ddd;
   }
-  
+
+  /* mobile mode */
+ @media (max-width: 768px) {
+    
+      .container {
+        display: block;
+      }
+      .menu{
+        width: 100%;
+      }
+      .menu button {
+        padding-left: 10%;
+        background-color: white;
+        font-size: 20px;
+        width: 100%;
+      }
+      .menu button:hover{
+        color:red;
+      }
+
+      .dropdown {
+        z-index: 1;
+      }
+
+      .dropdown-m {
+        display: block;
+        width: 100%;
+        padding-left: 43%;
+        font-size: 20px;
+        border-color: black ;
+        animation: expandDropdown 0.3s ease-out; /* Add animation for smooth transition */
+      }
+      
+      @keyframes expandDropdown {
+        from {
+          max-height: 0;
+          opacity: 0;
+        }
+        to {
+          max-height: 200px; /* Adjust the value as needed */
+          opacity: 1;
+        }
+      }
+      
+}
