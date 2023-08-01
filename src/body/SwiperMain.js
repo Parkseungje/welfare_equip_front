@@ -15,6 +15,7 @@ const SwiperMain = () => {
         position: "relative",
         left: "100px",
         top: "-5px",
+        zIndex : 1
       };
 
     const mobileStyle = {

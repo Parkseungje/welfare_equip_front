@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     width: 150px;
+    z-index: 2;
   }
   
   .dropdown li {
@@ -62,7 +63,7 @@
       }
 
       .dropdown {
-        z-index: 1;
+        z-index: 2;
       }
 
       .dropdown-m {
