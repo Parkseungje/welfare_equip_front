@@ -10,6 +10,7 @@ import Signup from './header/Signup';
 import MainImage from './header/MainImage';
 import SearchBar from './header/SearchBar';
 import DropDown from './header/DropDown';
+
 import './App.css'; // App.css에서 스타일을 정의합니다.
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
       <hr />
       <DropDown />
       <hr />
+      
       
       <Routes>
         <Route exact path="/" element={<Home/>} />
