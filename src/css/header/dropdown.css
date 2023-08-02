@@ -6,7 +6,7 @@
   }
   
   .menu {
-    position: relative; /*디폴트는 static(고정)이고 relatvie(상대적인) 을 사용하면 부모요소에 상대적으로 픽셀을 주는만큼 이동함*/
+    position: relative; 
   }
   
   .menu button {
@@ -17,7 +17,7 @@
   }
 
   .dropdown {
-    position: absolute; /* absolute는 html 전체를 부모요소로 보고 위치를 옮길수 있다 absolute로 설정하는순간 부모요소와 관계들이 끊긴다 */
+    position: absolute; /* https://nscworld.net/2020/12/27/position%EC%9D%98-relatve%EC%99%80-absolute-%EC%9D%B4%EA%B2%83%EB%A7%8C-%EC%95%8C%EB%A9%B4-%EC%9D%B4%ED%95%B4%EB%90%A8/ */
     top: 100%;
     left: -10%;
     list-style: none;
